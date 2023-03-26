@@ -1,3 +1,4 @@
+import 'package:ecommercegetx/core/services/services.dart';
 import 'package:ecommercegetx/data/datasource/static.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -13,10 +14,12 @@ class OnBoardingControllerImp extends OnBoardingController {
   late PageController pageController;
   int currentPage = 0;
 
+  MyServices myServices = Get.find();
   @override
   next() {
     currentPage++;
     if(currentPage > onBoardingList.length-1){
+      myServices.sharedPreferences.setString("onboarding", "1");
       Get.offAllNamed(AppRoute.login);
     }else{
     pageController.animateToPage(currentPage,

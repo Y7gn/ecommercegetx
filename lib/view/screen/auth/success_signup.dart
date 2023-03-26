@@ -27,8 +27,8 @@ class SuccessSignUp extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Center(child: Icon(Icons.check_circle_outline,size: 200,color: AppColorApp.primaryColor,)),
-            Text("...."),
-            Text("...."),
+            Text("37".tr),
+            Text("38".tr),
             Spacer(),
             Container(
               width: double.infinity,

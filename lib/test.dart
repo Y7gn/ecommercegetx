@@ -1,3 +1,4 @@
+import 'package:ecommercegetx/core/functions/checkinternet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
@@ -11,6 +12,21 @@ class Test extends StatefulWidget {
 }
 
 class _TestState extends State<Test> {
+
+  var res;
+  initialdata()async{
+    res = await checkInternet();
+    print(res);
+
+  }
+
+  @override
+  void initState() {
+    initialdata();
+
+    // TODO: implement initState
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(

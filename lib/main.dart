@@ -1,3 +1,4 @@
+import 'package:ecommercegetx/binding.dart';
 import 'package:ecommercegetx/core/constant/color.dart';
 import 'package:ecommercegetx/core/localization/changelocal.dart';
 import 'package:ecommercegetx/core/localization/translation.dart';
@@ -30,8 +31,10 @@ class MyApp extends StatelessWidget {
       locale: controller.language,
       theme: controller.appTheme,
       // home: const Test(),
-      home: const Language(),
-      routes: routes,
+      // home: const Language(), 
+      // routes: routes,
+      initialBinding: MyBinding(),
+      getPages: routes,
     );
   }
 }

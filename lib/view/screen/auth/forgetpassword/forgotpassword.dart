@@ -12,7 +12,8 @@ class ForgetPassword extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ForgetPasswordControllerImp controller = Get.put(ForgetPasswordControllerImp());
+    ForgetPasswordControllerImp controller =
+        Get.put(ForgetPasswordControllerImp());
 
     return Scaffold(
       appBar: AppBar(
@@ -31,27 +32,24 @@ class ForgetPassword extends StatelessWidget {
             const SizedBox(height: 20),
             CustomTextTitleAuth(text: "27".tr),
             const SizedBox(height: 10),
-            CustomTextBodyAuth(
-                textBody:
-                    "29".tr),
+            CustomTextBodyAuth(textBody: "29".tr),
             const SizedBox(height: 15),
-            
+
             CustomTextFormAuth(
-              valid: (val){
-                
-              },
+              isNumber: false,
+              valid: (val) {},
               mycontroller: controller.email,
               hintText: "12".tr,
               iconData: Icons.email_outlined,
               labelText: "18".tr,
             ),
-            
-            
-            CustomButtomAuth(text: "30".tr, onPressed: () {
-              controller.goToVerifyCode();
-            }),
+
+            CustomButtomAuth(
+                text: "30".tr,
+                onPressed: () {
+                  controller.goToVerifyCode();
+                }),
             // const SizedBox(height: 40),
-            
           ],
         ),
       ),

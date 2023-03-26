@@ -1,3 +1,8 @@
+
+import 'package:get/get.dart';
+
+
+
 class AppRoute {
   static const String login = "/login"; 
   static const String onBoarding = "/onboarding"; 
@@ -9,4 +14,5 @@ class AppRoute {
   static const String successResetPassword= "/successresetpassword"; 
   static const String checkemail= "/checkemail"; 
   static const String verifyCodeSignUp= "/verifycodesignup"; 
+  
 }
